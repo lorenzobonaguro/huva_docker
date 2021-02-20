@@ -13,7 +13,7 @@ RUN Rscript -e 'BiocManager::install(update = T, ask = F)' && \
 	Rscript -e 'BiocManager::install(c("fgsea", "limma", "GSVA"), version = "3.12")'
 
 # Install HUVA
-COPY huva_0.1.4.tar.gz /tmp/huva_0.1.4.tar.gz
-COPY huva.db_0.1.4.tar.gz /tmp/huva.db_0.1.4.tar.gz
-RUN Rscript -e 'install.packages("/tmp/huva.db_0.1.4.tar.gz", repos = NULL, type = "source")' && \
-	Rscript -e 'install.packages("/tmp/huva_0.1.4.tar.gz", repos = NULL, type = "source")'
+COPY huva_0.1.5.tar.gz /tmp/huva_0.1.5.tar.gz
+COPY huva.db_0.1.5.tar.gz /tmp/huva.db_0.1.5.tar.gz
+RUN Rscript -e 'install.packages("/tmp/huva.db_0.1.5.tar.gz", repos = NULL, type = "source")' && \
+	Rscript -e 'install.packages("/tmp/huva_0.1.5.tar.gz", repos = NULL, type = "source")'
